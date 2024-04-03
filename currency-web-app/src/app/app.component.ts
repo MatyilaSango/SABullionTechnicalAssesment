@@ -21,11 +21,11 @@ export class AppComponent implements OnInit {
   freeCurrencyService = inject(AppService)
 
   ngOnInit(): void {
-    this.getHistoricalCurreny(CURRENCIES.ZAR)  
+    this.getHistoricalCurrencies(CURRENCIES.ZAR)  
   }
 
-  async getHistoricalCurreny(currency: string){
-    const data = await this.freeCurrencyService.getHidtoricalCurreny({base_currency: CURRENCIES.USD, currencies: currency})
+  async getHistoricalCurrencies(currency: string){
+    const data = await this.freeCurrencyService.getHistoricalCurrencies({base_currency: CURRENCIES.USD, currencies: currency})
     this.activeHistoricalCurrencies = data
 
     switch(currency){

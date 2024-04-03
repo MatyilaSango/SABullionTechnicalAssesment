@@ -15,7 +15,7 @@ describe('AppService', () => {
   });
 
   it('should get historical data for USD/ZAR', async () => {
-    const data = await service.getHidtoricalCurreny({base_currency: "USD", currencies: "ZAR"})
+    const data = await service.getHistoricalCurrencies({base_currency: "USD", currencies: "ZAR"})
     const expectedData = {"2024-04-02":{"ZAR":18.7654120417}}
     expect(data).toBeDefined()
     expect(typeof data).toBe("object")
@@ -23,7 +23,7 @@ describe('AppService', () => {
   })
 
   it('should get historical data for USD/EUR', async () => {
-    const data = await service.getHidtoricalCurreny({base_currency: "USD", currencies: "EUR"})
+    const data = await service.getHistoricalCurrencies({base_currency: "USD", currencies: "EUR"})
     const expectedData = {"2024-04-02":{"EUR":0.9285001096}}
     expect(data).toBeDefined()
     expect(typeof data).toBe("object")

@@ -14,7 +14,7 @@ export class AppService {
     );
   }
 
-  async getHidtoricalCurreny(param: {base_currency: string, currencies: string}) {
+  async getHistoricalCurrencies(param: {base_currency: string, currencies: string}) {
     const data  = await this.freecurrencyapi.historical(param)  
     return data.data
   }
